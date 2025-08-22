@@ -1,0 +1,54 @@
+.plot-editor {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.controls {
+    padding: 10px;
+    background-color: var(--vscode-editor-background);
+    border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.add-button {
+    background-color: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.add-button:hover {
+    background-color: var(--vscode-button-hoverBackground);
+}
+
+#map {
+    flex: 1;
+    min-height: 400px;
+}
+
+.json-view {
+    height: 200px;
+    background-color: var(--vscode-editor-background);
+    border-top: 1px solid var(--vscode-panel-border);
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.json-view h3 {
+    margin: 0 0 10px 0;
+    color: var(--vscode-foreground);
+    font-size: 14px;
+}
+
+#json-content {
+    font-family: var(--vscode-editor-font-family);
+    font-size: var(--vscode-editor-font-size);
+    color: var(--vscode-editor-foreground);
+    background-color: var(--vscode-editor-background);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+}

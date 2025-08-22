@@ -27,7 +27,11 @@
       "Bash(gh pr view:*)",
       "Bash(chmod:*)",
       "Bash(npm update:*)",
-      "Bash(npm view:*)"
+      "Bash(npm view:*)",
+      "Bash(nvm install:*)",
+      "Bash(nvm use:*)",
+      "Bash(nvm:*)",
+      "Bash(node:*)"
     ]
   },
   "outputStyle": "default"

@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import { PlotJsonEditorProvider } from './plotJsonEditor';
 
 class HelloWorldProvider implements vscode.TreeDataProvider<string> {
     getTreeItem(element: string): vscode.TreeItem {
@@ -27,6 +28,9 @@ export function activate(context: vscode.ExtensionContext) {
 
     const provider = new HelloWorldProvider();
     vscode.window.createTreeView('codespace-extension.helloView', { treeDataProvider: provider });
+
+    // Register the custom plot JSON editor
+    context.subscriptions.push(PlotJsonEditorProvider.register(context));
 
     context.subscriptions.push(disposable);
 }

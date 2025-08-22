@@ -31,6 +31,10 @@ if command -v gh &> /dev/null; then
                 cd "$ORIGINAL_DIR"
                 rm -rf "$TEMP_DIR"
                 
+                # Open workspace folder now that extension is ready
+                echo "Opening workspace folder with extension ready..."
+                code workspace --add
+                
                 touch install-complete
                 exit 0
             fi
@@ -53,6 +57,11 @@ npx @vscode/vsce package --out extension.vsix
 if [ -f "extension.vsix" ]; then
     code --install-extension extension.vsix --force
     echo "Extension installed successfully (local build)"
+    
+    # Open workspace folder now that extension is ready
+    echo "Opening workspace folder with extension ready..."
+    code workspace --add
+    
     touch install-complete
 else
     echo "VSIX file not found"

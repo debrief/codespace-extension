@@ -53,7 +53,9 @@ jobs:
           
           const botComments = comments.data.filter(comment => 
             comment.user.login === 'github-actions[bot]' && 
-            comment.body.includes('Extension built successfully!')
+            (comment.body.includes('Extension built successfully!') || 
+             comment.body.includes('Open in GitHub Codespaces') ||
+             comment.body.includes('codespace'))
           );
           
           for (const comment of botComments) {
